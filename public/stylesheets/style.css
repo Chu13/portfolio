@@ -95,3 +95,18 @@ a.contact-me:hover {
   margin: 15px 0;
   font-weight: 100;
 }
+
+/* ----------- Working ------------- */
+
+.working {
+  padding-top: 50px;
+  margin: 0 auto;
+  padding-right: 100px;
+  width: 400px;
+}
+
+.working h1 {
+  color: white;
+  text-align: center;
+}
+/* --------------------------------- */
