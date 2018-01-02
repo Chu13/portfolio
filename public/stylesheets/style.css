@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  font-family: "Droid Sans", sans-serif;
+}
+a {
+  color:white;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  background-color: rgb(223,86,80);
+  height: 100px;
+  align-items: center;
+}
+
+nav {
+  margin: 0 auto;
+  width: 800px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  width: 70px;
+  border-radius: 100px;
+  border: 5px solid white;
+}
+
+footer {
+  background: rgb(68,68,68);
+  display: flex;
+  height: 100px;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content {
+  background: rgb(37,55,70);
+  height: 650px;
+}
+
+
+
+footer a {
+  text-decoration: none;
+}
+
+.index {
+  margin: 0 auto;
+  padding-top: 80px;
+  width: 800px;
+  display: flex;
+  flex-flow: row;
+  justify-content:center;
+}
+
+#profile-pic {
+	border-radius: 250px;
+}
+
+a.contact-me {
+	display: inline-block;
+ *display: inline;
+	padding:20px 60px;
+	background:#39d084;
+	color:#fff;
+	text-transform:uppercase;
+	font-size:20px;
+	margin:20px 0;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+}
+a.contact-me:hover {
+	text-decoration:none;
+	background:#11d170;
+}
+
+.index-right {
+  margin-left: 30px;
+}
+
+.index p, .index h3 {
+  color:#fff;
+  margin: 10px 0;
+  line-height: 30px;
+}
+
+.index h1 {
+  color: #39d084;
+  margin: 15px 0;
+  font-weight: 100;
+}
