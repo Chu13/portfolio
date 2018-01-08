@@ -40,7 +40,6 @@ footer {
 
 .content {
   background: rgb(37,55,70);
-  height: 650px;
 }
 
 
@@ -48,6 +47,10 @@ footer {
 footer a {
   text-decoration: none;
 }
+
+/* ----------- Layout ---------- */
+
+/* ----------- Profile --------- */
 
 .index {
   margin: 0 auto;
@@ -95,6 +98,56 @@ a.contact-me:hover {
   margin: 15px 0;
   font-weight: 100;
 }
+
+.space-profile {
+  height: 230px;
+}
+
+/* ----------- Profile ------------- */
+
+/* ----------- Skills -------------- */
+
+.space-skills {
+  height: 50px;
+}
+
+/* ----------- Skills -------------- */
+
+/* ----------- Work ---------------- */
+
+.personal {
+  text-align: center;
+  font-size: 2.5em;
+  color: #39d084;
+}
+
+.space {
+  height: 50px;
+}
+
+.container {
+  margin-top: 30px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.work {
+  width: 30%;
+  text-align: center;
+  color: white;
+}
+
+.work img {
+  margin-top: 20px;
+  width: 90%;
+}
+
+.space-work {
+  height: 250px;
+}
+
+/* ----------- Work ---------------- */
 
 /* ----------- Working ------------- */
 
