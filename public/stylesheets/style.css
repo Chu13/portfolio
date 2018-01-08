@@ -109,10 +109,10 @@ a.contact-me:hover {
 
 .skills {
   display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 40px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 80%;
+  margin: 40px auto;
 }
 
 .circle {
@@ -120,6 +120,7 @@ a.contact-me:hover {
   height: 200px;
   border-radius: 150px;
   color: white;
+  margin: 20px;
 }
 
 .circle-text {
@@ -146,6 +147,26 @@ a.contact-me:hover {
 
 .express {
   background-color: #AE76A6;
+}
+
+.mongo {
+  background-color: #001C55;
+}
+
+.node {
+  background-color: #8A817C;
+}
+
+.ajax {
+  background-color: #D05C1E;
+}
+
+.git {
+  background-color: #526B65;
+}
+
+.jquery{
+  background-color: #96E22B;
 }
 
 .space-skills {
