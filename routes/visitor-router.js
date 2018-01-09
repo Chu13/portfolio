@@ -13,4 +13,35 @@ router.get('/resume', (req, res, next) => {
   res.render('profile-views/resume');
 });
 
+router.get('/contact', (req, res, next) => {
+  res.render('contact');
+});
+
+router.post("/contact", (req, res, next) => {
+  const theMessage = new MessageModel({
+    name: req.body.name ,
+    email: req.body.email,
+    phone: req.body.phone,
+    message: req.body.message,
+    dateAdded: new Date()
+  });
+
+  theMessage.save()
+// After process the form redirect to the list of places
+  .then(() => {
+
+    res.redirect("/");
+
+  })
+  .catch((err) => {
+    if(theMessage.errors) {
+      res.locals.validationErrors = err.errors;
+      res.render("/contact");
+    }
+    else{
+      next(err);
+  }
+  });
+});
+
 module.exports = router;

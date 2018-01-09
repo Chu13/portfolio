@@ -110,7 +110,7 @@ a.contact-me:hover {
 .skills {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 80%;
   margin: 40px auto;
 }
@@ -120,7 +120,7 @@ a.contact-me:hover {
   height: 200px;
   border-radius: 150px;
   color: white;
-  margin: 20px;
+  margin: 20px 40px;
 }
 
 .circle-text {
@@ -170,7 +170,7 @@ a.contact-me:hover {
 }
 
 .space-skills {
-  height: 350px;
+  height: 50px;
 }
 
 /* ----------- Skills -------------- */
@@ -214,6 +214,84 @@ a.contact-me:hover {
 .space-resume {
   height: 50px;
 }
+
+/* ------------ Contact ------------- */
+
+#contact-text {
+  text-align: center;
+  color: #39d084;
+  margin-bottom: 10px;
+}
+
+#form {
+  margin: 0 auto;
+  width: 380px;
+}
+
+#form label {
+  color: #FFF;
+  display: inline-block;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+#form input,
+#form button {
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: 0;
+  padding: 4px;
+  width: 100%;
+}
+
+#form button {
+  background: #43a3e6;
+  border: 1px solid #43a3e6;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s ease background;
+  width: 100%;
+}
+
+#form button:hover {
+  background: #fff;
+  color: #43a3e6;
+  transition: .3s ease background;
+}
+
+#form h3 {
+  text-align: center;
+}
+
+textarea {
+  width: 370px;
+  height: 200px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.space-contact {
+  height: 50px;
+}
+
+/* .error-message {
+  background: #F02B63;
+  box-sizing: border-box;
+  color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+} */
+
+/* ------------ Contact ------------- */
 
 /* ----------- Working ------------- */
 

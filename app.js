@@ -32,6 +32,9 @@ app.use('/', index);
 const visitorsRouter = require('./routes/visitor-router');
 app.use(visitorsRouter);
 
+// const chuRouter = require('./routes/chu-router');
+// app.use(chuRouter);
+
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   const err = new Error('Not Found');
