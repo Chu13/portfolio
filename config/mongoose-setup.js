@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 // Use native JavaScript promises in Mongoose commands
 mongoose.Promise = Promise;
 
-mongoose.connect("mongodb://localhost/portfolio", { useMongoClient: true })
+mongoose.connect(process.env.MONGODB_URI, { useMongoClient: true })
   .then(() => {
     console.log("Mongoose is connected!");
   })
