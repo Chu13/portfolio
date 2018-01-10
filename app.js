@@ -5,8 +5,12 @@ const logger       = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser   = require('body-parser');
 const layouts      = require('express-ejs-layouts');
+// const nodemailer   = require('nodemailer');
+const session      = require('express-session');
+const passport     = require('passport');
 
 require('./config/mongoose-setup');
+require("./config/passport-setup");
 
 const app = express();
 
@@ -25,6 +29,24 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(layouts);
+app.use(
+  session({
+    resave: true,
+    saveUninitialized: true,
+    secret: 'this string is to avoid a deprecation warning'
+  })
+);
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+app.use((req, res, next) => {
+  res.locals.currentUser = req.user;
+
+  next();
+});
+
+
 
 const index = require('./routes/index');
 app.use('/', index);
@@ -32,8 +54,8 @@ app.use('/', index);
 const visitorsRouter = require('./routes/visitor-router');
 app.use(visitorsRouter);
 
-// const chuRouter = require('./routes/chu-router');
-// app.use(chuRouter);
+const chuRouter = require('./routes/chu-router');
+app.use(chuRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

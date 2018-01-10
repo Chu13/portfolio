@@ -22,6 +22,9 @@ const messageSchema = new Schema(
         type: String,
         required: [true, "Type a message"]
       }
+  },
+  {
+    timestaps: true
   }
 );
 

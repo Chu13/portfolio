@@ -1,6 +1,8 @@
 const express = require('express');
 const router  = express.Router();
 
+const MessageModel = require('../models/message-model');
+
 router.get('/skills', (req, res, next) => {
   res.render('profile-views/skills');
 });
@@ -30,7 +32,7 @@ router.post("/contact", (req, res, next) => {
 // After process the form redirect to the list of places
   .then(() => {
 
-    res.redirect("/");
+    res.redirect("/thanks");
 
   })
   .catch((err) => {
@@ -43,5 +45,10 @@ router.post("/contact", (req, res, next) => {
   }
   });
 });
+
+router.get('/thanks', (req, res, next) => {
+  res.render('thanks');
+});
+
 
 module.exports = router;

@@ -1,0 +1,19 @@
+<div class="space">
+
+</div>
+
+<h1>Full List of Messages</h1>
+
+
+<ul class="list">
+  <%  listOfMessages.forEach((oneMessage) => { %>
+    <div class="places-list">
+      <li>
+        <h3> <%= oneMessage.name %> </h3>
+        <p> <%=oneMessage.email %> </p>
+        <p> <%=oneMessage.phone %> </p>
+        <p> <%=oneMessage.message %> </p>
+      </li>
+    </div>
+  <%  })  %>
+</ul>
