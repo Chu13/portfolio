@@ -2,28 +2,36 @@
   margin: 0;
   font-family: "Droid Sans", sans-serif;
 }
+
+body {
+  background: rgb(37,55,70);
+}
+
 a {
   color:white;
   text-decoration: none;
 }
 
 header {
-  display: flex;
   background-color: rgb(223,86,80);
   height: 100px;
+  display: flex;
   align-items: center;
 }
 
 nav {
-  margin: 0 auto;
-  width: 800px;
+  float: right;
+  margin: 0px auto;
+  width: 55%;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
   align-items: center;
+  line-height: 20px;
 }
 
 #logo {
+  margin: 10px 30px;
   width: 70px;
   border-radius: 100px;
   border: 5px solid white;
@@ -38,9 +46,9 @@ footer {
   align-items: center;
 }
 
-.content {
+/* .content {
   background: rgb(37,55,70);
-}
+} */
 
 
 
@@ -55,7 +63,7 @@ footer a {
 .index {
   margin: 0 auto;
   padding-top: 80px;
-  width: 800px;
+  width: 55%;
   display: flex;
   flex-flow: row;
   justify-content:center;
@@ -67,7 +75,6 @@ footer a {
 
 a.contact-me {
 	display: inline-block;
- *display: inline;
 	padding:20px 60px;
 	background:#39d084;
 	color:#fff;
@@ -190,7 +197,7 @@ a.contact-me:hover {
 .container {
   margin-top: 30px;
   display: flex;
-  flex-flow: row;
+  flex-flow: row-wrap;
   justify-content: space-around;
 }
 
@@ -223,12 +230,12 @@ a.contact-me:hover {
   margin-bottom: 10px;
 }
 
-#form {
+.form {
   margin: 0 auto;
   width: 380px;
 }
 
-#form label {
+.form label {
   color: #FFF;
   display: inline-block;
   margin-top: 18px;
@@ -237,8 +244,8 @@ a.contact-me:hover {
   width: 100%;
 }
 
-#form input,
-#form button {
+.form input,
+.form button {
   box-sizing: border-box;
   font-size: 14px;
   outline: 0;
@@ -246,7 +253,7 @@ a.contact-me:hover {
   width: 100%;
 }
 
-#form button {
+.form button {
   background: #43a3e6;
   border: 1px solid #43a3e6;
   border-radius: 4px;
@@ -261,13 +268,13 @@ a.contact-me:hover {
   width: 100%;
 }
 
-#form button:hover {
+.form button:hover {
   background: #fff;
   color: #43a3e6;
   transition: .3s ease background;
 }
 
-#form h3 {
+.form h3 {
   text-align: center;
 }
 
@@ -311,4 +318,124 @@ textarea {
   color: white;
   text-align: center;
 }
+
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+}
+
+#toggle {
+  display: none;
+}
 /* --------------------------------- */
+
+
+/* ---------- Media Queries -------- */
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+  .index {
+    flex-flow: column;
+    width: 93%;
+    align-items: center;
+    margin-right:  20px;
+  }
+
+  .index h1, .index h3 {
+    text-align: center;
+  }
+
+  #profile-pic {
+    width: 200px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .index-right {
+    text-align: center;
+  }
+
+/* -------- Skills ------- */
+
+.skills {
+  width: 99%;
+  justify-content: center;
+}
+
+/* -------- Skills ------- */
+
+/* ----------- Work ---------------- */
+
+.container {
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.work {
+  width: 80%;
+  margin-bottom: 50px;
+}
+/* ----------- Work ---------------- */
+
+}
+
+@media only screen
+and (min-device-width : 481px)
+and (max-device-width : 768px) {
+
+.index {
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  text-align: center;
+  }
+}
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* Styles */
+}
