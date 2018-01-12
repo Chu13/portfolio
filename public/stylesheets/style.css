@@ -14,7 +14,6 @@ a {
 
 header {
   background-color: rgb(223,86,80);
-  height: 100px;
   display: flex;
   align-items: center;
 }
@@ -28,6 +27,31 @@ nav {
   justify-content: space-between;
   align-items: center;
   line-height: 20px;
+}
+
+.resp-nav {
+  background-color: rgb(223,86,80);
+  display: none;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.resp-nav a{
+  margin: 10px;
+}
+
+.hamburger {
+  display: none;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.hamburger-bar {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
 }
 
 #logo {
@@ -339,8 +363,15 @@ label {
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen
-and (min-device-width : 320px)
 and (max-device-width : 480px) {
+
+  header {
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display:inline;
+  }
 
   .index {
     flex-flow: column;
@@ -363,6 +394,11 @@ and (max-device-width : 480px) {
 
   .index-right {
     text-align: center;
+  }
+
+
+  .resp-nav-on {
+    display: flex;
   }
 
 /* -------- Skills ------- */

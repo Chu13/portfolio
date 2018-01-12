@@ -16,7 +16,20 @@
         <a href="/work">WORK</a>
         <a href="resume">RESUME</a>
       </nav>
+
+        <div class="hamburger">
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+        </div>
+
     </header>
+    <div class="resp-nav">
+      <a href="/">PROFILE</a>
+      <a href="/skills">SKILLS</a>
+      <a href="/work">WORK</a>
+      <a href="resume">RESUME</a>
+    </div>
     <div class="content">
 
     <%- body %>
@@ -26,5 +39,13 @@
       <a href="https://www.linkedin.com/in/jabordones/">linkedin.com/jabordones</a>
       <a href="/contact">CONTACT</a>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".hamburger").on("click", function(){
+          $(".resp-nav").toggleClass("resp-nav-on");
+        });
+      });
+    </script>
   </body>
 </html>
