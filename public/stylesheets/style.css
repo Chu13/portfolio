@@ -248,7 +248,7 @@ a.contact-me:hover {
 /* ----------- Work ---------------- */
 
 .space-resume {
-  height: 50px;
+  height: 250px;
 }
 
 /* ------------ Contact ------------- */
@@ -358,6 +358,44 @@ label {
   display: none;
 }
 /* --------------------------------- */
+
+.resume {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+
+.resume h1 {
+  color: #39d084;
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.resume p {
+  font-size: 1.5em;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.resume a {
+  background-color: #39d084;
+  padding: 20px 40px;
+  border-radius: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.size {
+  text-align: center;
+}
+
+.download {
+  display: block;
+  text-align: center;
+
+}
+
 
 
 /* ---------- Media Queries -------- */
