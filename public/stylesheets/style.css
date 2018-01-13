@@ -80,6 +80,10 @@ footer a {
   text-decoration: none;
 }
 
+#contact {
+  cursor: pointer;
+}
+
 /* ----------- Layout ---------- */
 
 /* ----------- Profile --------- */
@@ -140,8 +144,9 @@ a.contact-me:hover {
 
 .skills {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 80%;
   margin: 40px auto;
 }
@@ -252,66 +257,63 @@ a.contact-me:hover {
   text-align: center;
   color: #39d084;
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 
-.form {
+.form-div {
+  margin-top: 20px;
+}
+
+.form input {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  width: 30%;
+  background-color: #43515B;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+}
+
+.form button {
+  display: block;
   margin: 0 auto;
-  width: 380px;
 }
 
-.form label {
-  color: #FFF;
-  display: inline-block;
-  margin-top: 18px;
-  margin-bottom: 10px;
-  text-align: center;
-  width: 100%;
-}
 
-.form input,
-.form button {
-  box-sizing: border-box;
-  font-size: 14px;
-  outline: 0;
-  padding: 4px;
-  width: 100%;
-}
 
-.form button {
-  background: #43a3e6;
-  border: 1px solid #43a3e6;
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  padding: 8px 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: .3s ease background;
-  width: 100%;
-}
-
-.form button:hover {
-  background: #fff;
-  color: #43a3e6;
-  transition: .3s ease background;
-}
-
-.form h3 {
-  text-align: center;
+.space-contact {
+  height: 200px;
 }
 
 textarea {
-  width: 370px;
-  height: 200px;
-  margin-bottom: 20px;
-  padding: 5px;
+  display: block;
+  margin: 0 auto;
+  background-color: #43515B;
+  border: none;
+  border-radius: 20px;
+  width: 31%;
+  height: 80px;
+  padding-top: 8px;
+  padding-left: 8px;
 }
 
-.space-contact {
-  height: 50px;
+.form button {
+  width: 10%;
+  padding: 8px;
+  border-radius: 20px;
+  margin-top: 20px;
+  background-color: #39d084;
+  border: none;
+  cursor: pointer;
 }
+
+.form button:hover {
+  background-color: white;
+}
+
+
 
 /* .error-message {
   background: #F02B63;
@@ -401,6 +403,10 @@ and (max-device-width : 480px) {
     display: flex;
   }
 
+
+  .space-profile {
+    height: 100px;
+  }
 /* -------- Skills ------- */
 
 .skills {
@@ -424,6 +430,26 @@ and (max-device-width : 480px) {
 }
 /* ----------- Work ---------------- */
 
+/* ----------- contact ------------- */
+
+.form input {
+  width: 70%;
+}
+
+textarea {
+  width: 70%;
+}
+
+.form button {
+  width: 40%;
+}
+
+.space-contact {
+  height: 60px;
+}
+
+/* ----------- contact ------------- */
+
 }
 
 @media only screen
@@ -437,32 +463,43 @@ and (max-device-width : 768px) {
   width: 75%;
   text-align: center;
   }
-}
+
+  /* ----------- contact ------------- */
+
+  .form input {
+    width: 50%;
+  }
+
+  textarea {
+    width: 50%;
+  }
+
+  .form button {
+    width: 30%;
+  }
+
+  .space-contact {
+    height: 60px;
+  }
+
+  /* ----------- contact ------------- */
 
 }
+
+
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px) {
-/* Styles */
+  .skills {
+    width: 100%;
+  }
 }
 
 /* iPads (landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
-/* Styles */
-}
 
-/* iPads (portrait) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-/* Styles */
-}
+
 
 /* Desktops and laptops ----------- */
 @media only screen
