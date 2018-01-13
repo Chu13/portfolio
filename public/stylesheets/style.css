@@ -488,6 +488,14 @@ textarea {
 
 /* ----------- contact ------------- */
 
+.resume {
+  width: 80%;
+}
+
+.space-resume {
+  height: 100px;
+}
+
 }
 
 @media only screen
