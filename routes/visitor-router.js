@@ -4,19 +4,27 @@ const router  = express.Router();
 const MessageModel = require('../models/message-model');
 
 router.get('/skills', (req, res, next) => {
-  res.render('profile-views/skills');
+  res.render('profile-views/skills',{
+    page_name: 'skills'
+  });
 });
 
 router.get('/work', (req, res, next) => {
-  res.render('profile-views/work');
+  res.render('profile-views/work', {
+    page_name: 'work'
+  });
 });
 
 router.get('/resume', (req, res, next) => {
-  res.render('profile-views/resume');
+  res.render('profile-views/resume', {
+    page_name: 'resume'
+  });
 });
 
 router.get('/contact', (req, res, next) => {
-  res.render('contact');
+  res.render('contact', {
+    page_name: 'contact'
+  });
 });
 
 router.post("/contact", (req, res, next) => {

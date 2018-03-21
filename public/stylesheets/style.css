@@ -33,6 +33,10 @@ nav a:hover {
   font-weight: 600;
 }
 
+.current {
+  color: #11d170;
+}
+
 .resp-nav {
   background-color: rgb(223,86,80);
   display: none;
@@ -72,6 +76,8 @@ footer {
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  bottom: 0;
 }
 
 /* .content {
@@ -112,7 +118,7 @@ footer a:hover {
 a.contact-me {
 	display: inline-block;
 	padding:20px 60px;
-	background:#11d170;;
+	background:#11d170;
 	color:#fff;
 	text-transform:uppercase;
 	font-size:20px;
@@ -285,11 +291,6 @@ a.contact-me:hover {
   color: white;
 }
 
-.form button {
-  display: block;
-  margin: 0 auto;
-}
-
 
 
 .space-contact {
@@ -309,6 +310,9 @@ textarea {
 }
 
 .form button {
+  display: block;
+  margin: 0 auto;
+  color: white;
   width: 10%;
   padding: 8px;
   border-radius: 20px;
@@ -320,6 +324,7 @@ textarea {
 
 .form button:hover {
   background-color: white;
+  color: #39d084;
 }
 
 
