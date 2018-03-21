@@ -29,6 +29,10 @@ nav {
   line-height: 20px;
 }
 
+nav a:hover {
+  font-weight: 600;
+}
+
 .resp-nav {
   background-color: rgb(223,86,80);
   display: none;
@@ -80,6 +84,10 @@ footer a {
   text-decoration: none;
 }
 
+footer a:hover {
+  font-weight: 600;
+}
+
 #contact {
   cursor: pointer;
 }
@@ -104,7 +112,7 @@ footer a {
 a.contact-me {
 	display: inline-block;
 	padding:20px 60px;
-	background:#39d084;
+	background:#11d170;;
 	color:#fff;
 	text-transform:uppercase;
 	font-size:20px;
@@ -115,7 +123,8 @@ a.contact-me {
 }
 a.contact-me:hover {
 	text-decoration:none;
-	background:#11d170;
+	background:white;
+  color: #11d170;
 }
 
 .index-right {
