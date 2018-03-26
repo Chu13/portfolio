@@ -69,6 +69,7 @@ nav a:hover {
   border: 5px solid white;
 }
 
+
 footer {
   background: rgb(68,68,68);
   display: flex;
@@ -256,6 +257,10 @@ a.contact-me:hover {
   width: 90%;
 }
 
+.work img:hover {
+  width: 100%;
+}
+
 .space-work {
   height: 250px;
 }
@@ -408,6 +413,11 @@ label {
   display: block;
   text-align: center;
 
+}
+
+.download a:hover {
+  background-color: white;
+  color: #39d084;
 }
 
 
