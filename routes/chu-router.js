@@ -14,12 +14,16 @@ const router = express.Router();
 // Show the signup form
 router.get("/chu/login", (req, res, next) => {
     if(req.user) {
-      res.redirect("/chu/messages");
+      res.redirect("/chu/messages", {
+        page_name: 'messages'
+      });
 
       return;
     }
 
-    res.render("chu-views/login");
+    res.render("chu-views/login", {
+      page_name: 'login'
+    });
 });
 
 // Process the signup form
@@ -29,7 +33,9 @@ router.post("/process-signup", (req, res, next) => {
       req.body.signupPassword.match(/[^a-z0-9]/i) === null
     ) {
         res.locals.errorMessage = "Password is invalid, should have numbers, letters & special characters";
-        res.render("chu-views/login");
+        res.render("chu-views/login", {
+          page_name: 'login'
+        });
 
         return;
       }
@@ -69,11 +75,15 @@ router.post("/process-signup", (req, res, next) => {
 //Show the login form
 router.get("/chu/login", (req, res, next) => {
   if(req.user) {
-    res.redirect("/chu/messages");
+    res.redirect("/chu/messages", {
+      page_name: 'messages'
+    });
 
     return;
   }
-    res.render("user-views/login");
+    res.render("user-views/login", {
+      page_name: 'login'
+    });
 });
 
 //Process the log in form
@@ -82,7 +92,9 @@ router.post("/process-login", (req, res, next) => {
     .then((userFromDb) => {
         if (userFromDb === null){
           res.locals.errorMessage = "Email incorrect";
-          res.render("chu-views/login");
+          res.render("chu-views/login", {
+            page_name: 'login'
+          });
 
           return;
         }
@@ -93,7 +105,10 @@ router.post("/process-login", (req, res, next) => {
 
       if (isPasswordGood === false){
         res.locals.errorMessage = "Password incorrect";
-        res.render("user-views/login");
+        res.render("user-views/login"
+        , {
+          page_name: 'login'
+        });
 
         return;
       }
@@ -105,7 +120,9 @@ router.post("/process-login", (req, res, next) => {
         }
         else {
 
-          res.redirect("/chu/messages");
+          res.redirect("/chu/messages", {
+            page_name: 'messages'
+          });
         }
         });
      })
@@ -125,7 +142,9 @@ router.get("/chu/messages", (req, res, next) => {
   .exec()
   .then((messagesResults) => {
     res.locals.listOfMessages = messagesResults;
-    res.render("chu-views/messages");
+    res.render("chu-views/messages", {
+      page_name: 'messages'
+    });
   })
   .catch((err) => {
     next(err);
