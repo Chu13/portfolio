@@ -4,6 +4,11 @@
 
 <h1 id="contact-text"> Contact Me </h1>
 
+<% if (typeof errorMessage !== "undefined") { %>
+  <h1 class= "error-message">
+    <%= errorMessage %>
+  </h1>
+<% } %>
 
   <form class="form" method="post" action="/contact">
 

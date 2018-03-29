@@ -4,27 +4,19 @@ const router  = express.Router();
 const MessageModel = require('../models/message-model');
 
 router.get('/skills', (req, res, next) => {
-  res.render('profile-views/skills',{
-    page_name: 'skills'
-  });
+  res.render('profile-views/skills');
 });
 
 router.get('/work', (req, res, next) => {
-  res.render('profile-views/work', {
-    page_name: 'work'
-  });
+  res.render('profile-views/work');
 });
 
 router.get('/resume', (req, res, next) => {
-  res.render('profile-views/resume', {
-    page_name: 'resume'
-  });
+  res.render('profile-views/resume');
 });
 
 router.get('/contact', (req, res, next) => {
-  res.render('contact', {
-    page_name: 'contact'
-  });
+  res.render('contact');
 });
 
 router.post("/contact", (req, res, next) => {
@@ -40,13 +32,14 @@ router.post("/contact", (req, res, next) => {
 // After process the form redirect to the list of places
   .then(() => {
 
-    res.redirect("/thanks");
+    res.redirect("thanks");
 
   })
   .catch((err) => {
     if(theMessage.errors) {
       res.locals.validationErrors = err.errors;
-      res.render("/contact");
+      console.log("message error");
+      res.redirect("contact");
     }
     else{
       next(err);

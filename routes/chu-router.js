@@ -14,16 +14,12 @@ const router = express.Router();
 // Show the signup form
 router.get("/chu/login", (req, res, next) => {
     if(req.user) {
-      res.redirect("/chu/messages", {
-        page_name: 'messages'
-      });
+      res.redirect("/chu/messages");
 
       return;
     }
 
-    res.render("chu-views/login", {
-      page_name: 'login'
-    });
+    res.render("chu-views/login");
 });
 
 // Process the signup form
@@ -33,9 +29,7 @@ router.post("/process-signup", (req, res, next) => {
       req.body.signupPassword.match(/[^a-z0-9]/i) === null
     ) {
         res.locals.errorMessage = "Password is invalid, should have numbers, letters & special characters";
-        res.render("chu-views/login", {
-          page_name: 'login'
-        });
+        res.render("chu-views/login");
 
         return;
       }
@@ -75,15 +69,11 @@ router.post("/process-signup", (req, res, next) => {
 //Show the login form
 router.get("/chu/login", (req, res, next) => {
   if(req.user) {
-    res.redirect("/chu/messages", {
-      page_name: 'messages'
-    });
+    res.redirect("/chu/messages");
 
     return;
   }
-    res.render("user-views/login", {
-      page_name: 'login'
-    });
+    res.render("user-views/login");
 });
 
 //Process the log in form
@@ -92,9 +82,7 @@ router.post("/process-login", (req, res, next) => {
     .then((userFromDb) => {
         if (userFromDb === null){
           res.locals.errorMessage = "Email incorrect";
-          res.render("chu-views/login", {
-            page_name: 'login'
-          });
+          res.render("chu-views/login");
 
           return;
         }
