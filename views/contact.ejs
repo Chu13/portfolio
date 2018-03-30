@@ -4,10 +4,12 @@
 
 <h1 id="contact-text"> Contact Me </h1>
 
-<% if (typeof errorMessage !== "undefined") { %>
-  <h1 class= "error-message">
-    <%= errorMessage %>
-  </h1>
+<% if (typeof validationErrors !== "undefined") { %>
+  <ul class="error-message">
+    <% for (let field in validationErrors) { %>
+      <li> <%= validationErrors[field].message %> </li>
+  <%  } %>
+  </ul>
 <% } %>
 
   <form class="form" method="post" action="/contact">

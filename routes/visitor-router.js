@@ -38,8 +38,7 @@ router.post("/contact", (req, res, next) => {
   .catch((err) => {
     if(theMessage.errors) {
       res.locals.validationErrors = err.errors;
-      console.log("message error");
-      res.redirect("contact");
+      res.render("contact");
     }
     else{
       next(err);
