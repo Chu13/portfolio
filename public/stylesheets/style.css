@@ -336,9 +336,9 @@ textarea {
 
 
 .error-message {
-  background: #F02B63;
   box-sizing: border-box;
   color: #fff;
+  border: 1px solid red;
   margin: 20px auto;
   padding: 20px;
   list-style-type: none;
